@@ -19,7 +19,7 @@ def get_requirements(file_path:str)->List[str]:  #  List[str] This will return a
 setup(
 name='IBMATTRITIONCLASSIFICATION',
 version='0.0.1',
-author='Adharsh',
+author='Adharsh Sobhanan',
 author_email='adharshsobhanan@gmail.com',
 packages=find_packages(),
 install_requires=get_requirements('requirement.txt')
