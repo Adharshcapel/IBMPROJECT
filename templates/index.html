@@ -1,0 +1,222 @@
+<html>
+<body>
+    <div class="login">
+       <h1>Student Exam Performance Indicator</h1>
+   
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+        <h1>
+            <legend>Student Exam Performance Prediction</legend>
+        </h1>
+        <div class="mb-3">
+            <label class="form-label">Gender</label>
+            <select class="form-control" name="gender" placeholder="Enter you Gender" required>
+                <option class="placeholder" selected disabled value="">Select your Gender</option>
+                <option value="male">
+                    Male
+                </option>
+                <option value="female">
+                    Female
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">EducationField</label>
+            <select class="form-control" name="EducationField" placeholder="Enter the field of education of employee" required>
+                <option class="placeholder" selected disabled value="">Select EducationField</option>
+                <option value="Life Sciences">
+                    Life Sciences
+                </option>
+                <option value="Medical">
+                    Medical
+                </option>
+                <option value="Marketing">
+                    Marketing
+                </option>
+                <option value="Other">
+                    Other
+                </option>
+                <option value="Technical Degree">
+                    Technical Degree
+                </option>
+                <option value="Human Resources">
+                    Human Resources
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">JobRole</label>
+            <select class="form-control" name="JobRole"
+                placeholder="Select job role of the employee" required>
+                <option class="placeholder" selected disabled value="">Select job role</option>
+                <option value="Sales Executive">
+                    Sales Executive
+                </option>
+                <option value="Research Scientist">
+                    Research Scientist
+                </option>
+                <option value="Laboratory Technician">
+                    Laboratory Technician
+                </option>
+                <option value="Manufacturing Director">
+                    Manufacturing Director
+                </option>
+                <option value="Healthcare Representative">
+                    Healthcare Representative
+                </option>
+                <option value="Manager">
+                    Manager
+                </option>
+                <option value="Sales Representative">
+                    Sales Representative
+                </option>
+                <option value="Research Director">
+                    Research Director
+                </option>
+                <option value="Human Resources">
+                    Human Resources
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">MaritalStatus</label>
+            <select class="form-control" name="MaritalStatus" placeholder="Enter marital status" required>
+                <option class="placeholder" selected disabled value="">Select Marital Status</option>
+                <option value="Married">
+                    Married
+                </option>
+                <option value="Single">
+                    Single
+                </option>
+                <option value="Divorced">
+                    Divorced
+                </option>
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">BusinessTravel</label>
+            <select class="form-control" name="BusinessTravel" placeholder="Enter employees travel routine"
+                required>
+                <option class="placeholder" selected disabled value="">Select employee travel type</option>
+                <option value="Travel_Rarely">
+                    Travel_Rarely
+                </option>
+                <option value="Travel_Frequently">
+                    Travel_Frequently
+                </option>
+                <option value="Non-Travel">
+                    Non-Travel
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Department</label>
+            <select class="form-control" name="Department" placeholder="Enter employees travel routine"
+                required>
+                <option class="placeholder" selected disabled value="">Select employee travel type</option>
+                <option value="Travel_Rarely">
+                    Travel_Rarely
+                </option>
+                <option value="Travel_Frequently">
+                    Travel_Frequently
+                </option>
+                <option value="Non-Travel">
+                    Non-Travel
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">OverTime</label>
+            <input class="form-control" type="number" name="OverTime"
+                placeholder="Enter employee preference for overtime" min='0' max='1' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">StockOptionLevel</label>
+            <input class="form-control" type="number" name="StockOptionLevel"
+                placeholder="Enter the StockOptionLevel" min='1' max='4' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Age</label>
+            <input class="form-control" type="number" name="Age"
+                placeholder="Enter Employee Age" min='18' max='60' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">DistanceFromHome</label>
+            <input class="form-control" type="number" name="DistanceFromHome"
+                placeholder="Enter distance from home" min='1' max='30' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">EducationField</label>
+            <input class="form-control" type="number" name="EducationField"
+                placeholder="Enter EducationField" min='1' max='5' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">EnvironmentSatisfaction</label>
+            <input class="form-control" type="number" name="EnvironmentSatisfaction"
+                placeholder="Enter EnvironmentSatisfaction" min='1' max='5' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">HourlyRate</label>
+            <input class="form-control" type="number" name="HourlyRate"
+                placeholder="Enter EnvironmentSatisfaction" min='1' max='5' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">HourlyRate</label>
+            <input class="form-control" type="number" name="HourlyRate"
+                placeholder="Enter EnvironmentSatisfaction" min='1' max='5' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">JobInvolvement</label>
+            <input class="form-control" type="number" name="JobInvolvement"
+                placeholder="Enter JobInvolvement" min='1' max='5' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">JobInvolvement</label>
+            <input class="form-control" type="number" name="JobInvolvement"
+                placeholder="Enter JobInvolvement" min='1' max='9' />
+        </div>
+        <div class="mb-3">
+        <label class="form-label">NumCompaniesWorked</label>
+        <input class="form-control" type="number" name="NumCompaniesWorked"
+            placeholder="Enter JobInvolvement" min='1' max='9' />
+        </div>
+        <div class="mb-3">
+        <label class="form-label">TrainingTimesLastYear</label>
+        <input class="form-control" type="number" name="TrainingTimesLastYear"
+            placeholder="Enter TrainingTimesLastYear" min='1' max='9' />
+        </div>
+        <div class="mb-3">
+        <label class="form-label">RelationshipSatisfaction</label>
+        <input class="form-control" type="number" name="RelationshipSatisfaction"
+            placeholder="Enter TrainingTimesLastYear" min='1' max='9' />
+        </div>
+        <div class="mb-3">
+        <label class="form-label">WorkLifeBalance</label>
+        <input class="form-control" type="number" name="WorkLifeBalance"
+            placeholder="Enter TrainingTimesLastYear" min='1' max='6' />
+        </div>
+         </div>
+        <div class="mb-3">
+        <label class="form-label">HourlyRate</label>
+        <input class="form-control" type="number" name="HourlyRate"
+            placeholder="Enter TrainingTimesLastYear" min='1' max='6' />
+        </div>
+        <div class="mb-3">
+        <label class="form-label">PercentSalaryHike</label>
+        <input class="form-control" type="number" name="PercentSalaryHike"
+            placeholder="Enter TrainingTimesLastYear" min='1' max='6' />
+        </div>
+
+
+
+
+
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict your Maths Score" required />
+        </div>
+    </form>
+    <h2>
+       THE  prediction is {{results}}
+    </h2>
+   <body>
+</html>

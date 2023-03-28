@@ -11,4 +11,5 @@ IPython
 openpyxl
 dataclasses
 dill
+Flask
 -e .
